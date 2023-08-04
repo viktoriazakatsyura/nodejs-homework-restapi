@@ -1,11 +1,7 @@
 const app = require('./app')
 const mongoose = require("mongoose");
 
-// app.listen(3000, () => {
-//   console.log("Server running. Use our API on port: 3000")
-// })
-
-const {DB_HOST} = require('./config')
+const {DB_HOST} = process.env;
 
 mongoose.set('strictQuery', true)
 
@@ -18,3 +14,9 @@ mongoose.connect(DB_HOST)
   console.log(error.message)
   process.exit(1)
 })
+
+
+
+// app.listen(3000, () => {
+//   console.log("Server running. Use our API on port: 3000")
+// })
