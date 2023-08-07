@@ -12,3 +12,4 @@ router.patch("/", authenticate, validateBody(schemas.updateSchema), ctrl.updateS
 
 
 module.exports = router;
+
