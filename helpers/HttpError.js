@@ -8,7 +8,7 @@ const messages = {
     500: "Server error",
   };
 
-const HttpError = (status, message) => {
+const HttpError = (status, message=messages[status]) => {
     const error = new Error(message);
     error.status = status;
     return error;
